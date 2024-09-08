@@ -1,0 +1,234 @@
+<style>
+.weather-widget {
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 932px;
+  width: 100%;
+  padding: 97px 40px 40px;
+}
+
+.background-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.temperature-widget {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-weight: 431;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 18px 31px 190px;
+}
+
+.widget-title {
+  color: #fff;
+  align-self: center;
+  font: 20px/2.6 Cormorant Unicase, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.temperature-display {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 53px 0 -38px;
+}
+
+.temperature-value {
+  color: #fff;
+  font: 100px/52px Inter, sans-serif;
+}
+
+.temperature-feel {
+  color: #fff6f6;
+  align-self: flex-start;
+  z-index: 10;
+  margin-top: -19px;
+  font: 15px/3 Cormorant Unicase, sans-serif;
+}
+
+.temperature-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 99px;
+}
+
+.forecast-widget {
+  position: relative;
+  background-color: rgba(245, 245, 245, 0.7);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px 13px;
+}
+
+.temperature-range {
+  display: flex;
+  margin-left: 18px;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: Inter, sans-serif;
+  font-weight: 431;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.range-label {
+  display: flex;
+  gap: 2px;
+  font-size: 20px;
+  color: #000;
+  line-height: 2.6;
+}
+
+.range-value {
+  display: flex;
+  gap: 25px;
+  font-size: 27px;
+  color: rgba(30, 30, 30, 0.66);
+  letter-spacing: -2px;
+  line-height: 2;
+}
+
+.sunrise-sunset {
+  display: flex;
+  width: 297px;
+  max-width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 35px 0 0 17px;
+}
+
+.sun-icon {
+  aspect-ratio: 1.07;
+  object-fit: contain;
+  object-position: center;
+  width: 107px;
+  max-width: 100%;
+}
+
+.sun-times {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.sun-icons {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.sunrise-icon,
+.sunset-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 48px;
+}
+
+.sunrise-icon {
+  margin-top: 4px;
+}
+
+.sun-times-text {
+  color: #000;
+  letter-spacing: -2px;
+  text-align: center;
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin-top: 10px;
+  font: 431 20px/2.6 Inter, sans-serif;
+}
+
+.hydration-reminder {
+  display: flex;
+  margin-top: 75px;
+  gap: 39px;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font: 431 27px/2 Inter, sans-serif;
+}
+
+.hydration-icon {
+  aspect-ratio: 1.06;
+  object-fit: contain;
+  object-position: center;
+  width: 113px;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<section class="weather-widget">
+  <div class="widget-container">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c67c7d3cd6b20c06f0223df004dd9b784a5e2ae2de14415d1095035ed8547f0c?placeholderIfAbsent=true&apiKey=614bf612405041afb8af7b58700d30cd" alt="" class="background-image" />
+    <div class="temperature-widget">
+      <h2 class="widget-title">Temperature for today</h2>
+      <div class="temperature-display">
+        <div>
+          <p class="temperature-value">24°</p>
+          <p class="temperature-feel">Feels like</p>
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/27540f1a3414968cb24ad398f507fdb32c181478bf8149c901d7144f0e54c867?placeholderIfAbsent=true&apiKey=614bf612405041afb8af7b58700d30cd" alt="Current weather condition icon" class="temperature-icon" />
+      </div>
+    </div>
+    <div class="forecast-widget">
+      <div class="temperature-range">
+        <div class="range-label">
+          <p>TMIN - TMAX:</p>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/26e91e6d8b9efd4a5c86289ed0f25fec94d5497381b0f5f14890317f7985f747?placeholderIfAbsent=true&apiKey=614bf612405041afb8af7b58700d30cd" alt="Temperature range icon" width="48" height="48" />
+        </div>
+        <div class="range-value">
+          <p>20 - 28</p>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/32ea1d8665726844c5206762727206bd7375115415a6a2f039a4a907ff22e720?placeholderIfAbsent=true&apiKey=614bf612405041afb8af7b58700d30cd" alt="Temperature scale icon" width="48" height="48" />
+        </div>
+      </div>
+      <div class="sunrise-sunset">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/016959055456466542a571266e338a7cdac3e07f1ba7cff9c0d9755d91447cd5?placeholderIfAbsent=true&apiKey=614bf612405041afb8af7b58700d30cd" alt="Sun path diagram" class="sun-icon" />
+        <div class="sun-times">
+          <div class="sun-icons">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0b7439ee74725391cf707be942c956b2651f9eb6cd59a25ed61ff0e061acde15?placeholderIfAbsent=true&apiKey=614bf612405041afb8af7b58700d30cd" alt="Sunrise icon" class="sunrise-icon" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ade8f4d939d9ef0d3958774b18667afb70448c2e127eadf75770f8218a48e4a5?placeholderIfAbsent=true&apiKey=614bf612405041afb8af7b58700d30cd" alt="Sunset icon" class="sunset-icon" />
+          </div>
+          <p class="sun-times-text">6:00 7:30</p>
+        </div>
+      </div>
+      <div class="hydration-reminder">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e268878b0c0b782d81c83dd1f56aac60432eefe988a5ed2395d55e7531e631c3?placeholderIfAbsent=true&apiKey=614bf612405041afb8af7b58700d30cd" alt="Water droplet icon" class="hydration-icon" />
+        <p>KEEP HYDRATE !</p>
+      </div>
+    </div>
+  </div>
+</section>

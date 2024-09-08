@@ -1,0 +1,98 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.weather-info, .weather-alert {
+    flex: 1;
+    text-align: center;
+}
+
+.weather-info h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.weather-alert {
+    color: red;
+    font-weight: bold;
+}
+
+.forecast {
+    margin-bottom: 20px;
+}
+
+.forecast-item {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.forecast-item p {
+    margin: 0;
+}
+
+.extra-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.extra-info div {
+    flex: 1;
+    text-align: center;
+}
+
+.personalization {
+    text-align: center;
+}
+
+.personalization button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.personalization button:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}

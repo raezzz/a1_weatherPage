@@ -1,0 +1,84 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #87CEEB; /* Light blue background */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 667px;
+  width: 375px;
+  background: linear-gradient(to bottom, #1E90FF, #87CEEB); /* Gradient blue */
+  color: white;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info {
+  text-align: center;
+}
+
+.temperature h1 {
+  font-size: 72px;
+  margin: 0;
+}
+
+.temperature p {
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+.temp-range {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.range-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+
+.range-slider button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sun-info {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.sun-time {
+  text-align: center;
+}
+
+.hydrate-reminder {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.hydrate-reminder p {
+  font-size: 18px;
+}
